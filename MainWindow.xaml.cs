@@ -8,7 +8,7 @@ namespace BankkontoApp
         public MainWindow()
         {
             InitializeComponent();
-            konto = new Bankkonto("123456789", 100); // Beispielkontonummer | Anfangsguthaben
+            konto = new Bankkonto("187", 100); // Beispielkontonummer | Anfangsguthaben
         }
 
         private void Einzahlen_Click(object sender, RoutedEventArgs e)
@@ -48,7 +48,7 @@ namespace BankkontoApp
 
         private void AktualisiereKontostandAnzeige()
         {
-            txtKontostand.Text = konto.KontostandAbfragen().ToString();
+            txtKontostand.Text = konto.KontostandAbfragen().ToString("C");
         }
     }
 }
